@@ -1,0 +1,8 @@
+mixin socials(mod)
+  div(class='socials socials__' + mod)
+    ul.socials__list
+      - var elems = [{name: 'insta', link: 'https://instagram.com'}, {name: 'vk', link: 'https://vk.com'}, {name: 'github', link: 'https://github.com'}]
+      each el in elems
+        li.socials__item
+          a.socials__link(href=`${el.link}`, target="_blank")
+            +icon(`${el.name}`, 'socials__image')

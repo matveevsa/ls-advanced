@@ -1,0 +1,79 @@
+.skills {
+  position: relative;
+  padding: 145px 0 105px;
+  background-image: url('../images/content/skills-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.skills__image {
+  position: absolute;
+  top: 14%;
+  left: 0;
+}
+
+.skills__stats {
+  max-width: 977px;
+  margin-left: auto;
+}
+
+.skills__title {
+  @include font-set(30px, 36px, 700);
+  margin-bottom: 52px;
+}
+
+.skills__text {
+  width: 63%;
+  margin-bottom: 76px;
+}
+
+.skills__subtitle {
+  margin-bottom: 20px;
+  @include font-set(24px, 48px, 700);
+  color: $main-text;
+}
+
+.skills__box {
+  width: 91%;
+  margin-bottom: 27px;
+  padding-left: 125px;
+}
+
+.skills__list {
+    @include flex(space-between, center, row, wrap);
+}
+
+.skills__item {
+  position: relative;
+  width: 165px;
+  height: 165px;
+}
+
+.skills__progress {
+  position: relative;
+  transform: rotate(-180deg);
+}
+
+ .skills__circle {
+  fill: transparent;
+  stroke: #ccc;
+  stroke-width: 2;
+  opacity: 0.1;
+}
+
+.skills__circle-dash {
+  stroke: $secondary-color;
+  stroke-width: 5;
+  stroke-dasharray: 251;
+  stroke-dashoffset: 186;
+  opacity: 1;
+}
+
+.skills__name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+}

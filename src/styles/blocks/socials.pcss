@@ -1,0 +1,19 @@
+.socials {
+  width: 11%;
+}
+
+.socials__list {
+  @include flex(space-between, center, row, wrap);
+}
+
+.socials__image {
+  width: 27px;
+  height: 27px;
+  fill: #fff;
+  opacity: 0.5;
+}
+
+.socials__link:hover .socials__image {
+  opacity: 1;
+  fill: $secondary-color;
+}

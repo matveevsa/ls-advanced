@@ -1,0 +1,43 @@
+.intro {
+  padding-top: 355px;
+  padding-bottom: 168px;
+  text-align: center;
+}
+
+.intro__title {
+  margin-left: 21%;
+  @include flex(flex-start, flex-start, row, wrap);
+
+  text-align: left;
+  @include font-set(72px, 60px, 800);
+  color: $main-text;
+}
+
+.intro__subtitle {
+  margin-right: 50px;
+
+  text-align: right;
+  @include font-set(18px, 30px, 600);
+  opacity: 0.4;
+}
+
+.intro__scroll {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 330px;
+  padding: 0;
+  padding-right: 47px;
+
+  background-image: svg-load('scroll.svg', fill=#fff, width=100%, height=100%);
+  background-position: center right;
+  background-repeat: no-repeat;
+
+  @include font-set(18px, 30px, 600);
+  color: $main-text;
+  text-decoration: none;
+  }
+
+.intro__scroll:hover {
+  color: $secondary-color;
+  background-image: svg-load('scroll.svg', fill=$secondary-color, width=100%, height=100%);
+}

@@ -1,0 +1,10 @@
+section.projects
+  .container
+    h2.title.projects__title Мои работы
+    .projects__wrapper
+      .projects__slider
+          +image('content/1.jpg', 'projects__image')
+          include slider
+          +slider('projects', ['1', '2', '3', '4', '5'], '1')
+      .projects__school.school
+        include school

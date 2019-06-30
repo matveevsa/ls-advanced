@@ -1,0 +1,44 @@
+.projects {
+  padding-top: 193px;
+  padding-bottom: 200px;
+  color: $text-color;
+}
+
+.projects__title {
+  margin-bottom: 90px;
+  color: $text-color;
+}
+
+.projecrs__text {
+  @extend .projects__title;
+}
+
+.projects__wrapper {
+  @include flex(flex-start, flex-start);
+}
+
+.projects__slider {
+  position: relative;
+  max-width: 1133px;
+  width: 100%;
+}
+
+.projects__slider:after {
+  position: absolute;
+  top: 207px;
+  right: 0;
+  content: '2';
+  @include font-set(400px, 48px, 800);
+  color: #f0f0f0;
+  z-index: -1;
+}
+
+.projects__school {
+  max-width: 348px;
+  width: 100%;
+}
+
+.projects__image {
+  width: 977px;
+  height: 550px;
+}

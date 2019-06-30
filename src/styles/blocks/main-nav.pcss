@@ -1,0 +1,31 @@
+.main-nav {
+  width: 46.6%;
+}
+
+.main-nav__list {
+  @include flex(space-between, center, row, wrap);
+}
+
+.main-nav__link {
+  position: relative;
+  display: block;
+  padding: 39px 0;
+
+  @include font-set(16px, 30px, 400);
+  text-decoration: none;
+}
+
+.main-nav__link:hover {
+  color: $secondary-color;
+}
+
+.main-nav__link:hover:after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: $secondary-color;
+}

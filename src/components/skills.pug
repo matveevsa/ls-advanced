@@ -1,0 +1,26 @@
+section.skills
+  +image('content/hands.png', 'skills__image')
+  .container
+    .skills__stats
+      h2.title.skills__title Чем я могу быть вам полезен
+      p.text.skills__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+      .skills__box
+        h3.skills__subtitle Front-end
+        ul.skills__list
+          - var items = ['HTML 5', 'CSS3', 'Javascript', 'Jquery и Vue.js']
+          each item in items
+            li.skills__item
+              svg.skills__progress(viewBox="0 0 100 100" preserveAspectRatio="none")
+                circle.skills__circle(cx='50' cy='50' r='40')
+                circle.skills__circle.skills__circle-dash(cx='50' cy='50' r='40')
+              .skills__name.text= item
+      .skills__box
+        h3.skills__subtitle Workflow
+        ul.skills__list
+          - var items = ['GIT', 'Terminal', 'Gulp', 'Webpack']
+          each item in items
+            li.skills__item
+              svg.skills__progress(viewBox="0 0 100 100" preserveAspectRatio="none")
+                circle.skills__circle(cx='50' cy='50' r='40')
+                circle.skills__circle.skills__circle-dash(cx='50' cy='50' r='40')
+              .skills__name.text= item

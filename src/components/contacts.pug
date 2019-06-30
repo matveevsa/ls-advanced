@@ -1,0 +1,15 @@
+section.contacts.container
+  h2.title.contacts__title Связаться со мной
+  form.contacts__form
+    .contacts__info
+      label.contacts__block
+        .contacts__label-text.text Введите ваше имя
+        input.contacts__name(type="text" name="name" placeholder="Ковальчук Дмитрий")
+      label.contacts__block
+        .contacts__label-text.text Введите ваш email
+        input.contacts__email(type="text" name="email" placeholder="loftschool@study.com")
+    .contacts__message
+      label.contacts__block
+        .contacts__label-text.text Сообщение к письму
+        textarea.contacts__message-text(name="message" placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса")
+    button.contacts__button(type="submit") Отправить

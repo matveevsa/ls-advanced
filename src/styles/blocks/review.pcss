@@ -1,0 +1,104 @@
+.review {
+  position: relative;
+  padding-top: 145px;
+  padding-bottom: 195px;
+}
+
+.review__title {
+  margin-bottom: 90px;
+}
+
+.review__controls {
+  position: absolute;
+  top: 145px;
+  left: 480px;
+  max-width: 130px;
+  width: 100%;
+  @include flex(space-between, center);
+}
+
+.review__button {
+  position: relative;
+  display: block;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.review__button:before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  border: 2px solid #fff;
+  border-left: transparent;
+  border-bottom: transparent;
+  transform: rotate(45deg) translate(-50%);
+}
+
+.review__button-prev:before {
+  border: 2px solid #fff;
+  border-right: transparent;
+  border-top: transparent;
+}
+
+.review__button:hover,
+.review__button:hover:before {
+  border-color: $secondary-color;
+}
+
+.review__list {
+  max-width: 977px;
+  @include flex(space-between, stretch, row, wrap);
+}
+
+.review__item {
+  @include flex(space-between, flex-start, column);
+  position: relative;
+  max-width: 474px;
+  width: 100%;
+  padding-left: 125px;
+}
+
+.review__item:before {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  content: '';
+  display: block;
+  width: 75px;
+  height: 75px;
+
+  background-image: svg-load('quote.svg', fill=#fff, width=100%, height=100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.05;
+}
+
+.review__qoute {
+  margin-bottom: 25px;
+
+  font-weight: 400;
+}
+
+.review__author {
+  @include flex(space-between, flex-start);
+}
+
+.review__image {
+  margin-right: 30px;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+}
+
+.review__name {
+  @include font-set(18px, 48px, 400);
+  color: $main-text;
+  opacity: 1;
+}

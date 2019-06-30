@@ -1,0 +1,14 @@
+mixin slider(mod, arrNames, active)
+  div(class="slider slider--" + mod)
+      .slider__controls
+        button.slider__button.slider__button--next
+        button.slider__button.slider__button--prev(disabled)
+      .slider__list
+        each item in arrNames
+          if active === item
+            .slider__item.slider__item--active
+              +image(`content/${item}.jpg`, 'slider__image')
+          else
+            .slider__item
+                block item
+                +image(`content/${item}.jpg`, 'slider__image')

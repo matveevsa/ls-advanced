@@ -1,0 +1,6 @@
+nav.main-nav
+  ul.main-nav__list
+    -var items = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связатсья',]
+    each item in items
+      li.main-nav__item
+        a.main-nav__link(href="#")= `${item}`

@@ -1,0 +1,18 @@
+section.hero
+  h2.sr-only Немного обо мне
+  .container
+    .hero__wrapper
+      .hero__head
+        +image('content/user.jpg', 'hero__image')
+        table.hero__table-data
+          - var data = [['Проживаю:', 'Сыктывкар'], ['Возраст:', '31 год'], ['Родился:', '2 августа 1987']]
+          each row in data
+            tr
+              td.text #{row[0]}
+              td.text.hero__text #{row[1]}
+      .hero__about
+        p.text.hero__text Привет, меня зовут
+        h2.title.hero__name Матвеев Сергей
+        p.text.hero__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+        p.text.hero__asterisk Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
