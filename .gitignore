@@ -1,7 +1,7 @@
 node_modules
+dist
 .DS_Store
 .vscode
 .idea
 *.log
-dist
 # git subtree push --prefix dist origin gh-pages

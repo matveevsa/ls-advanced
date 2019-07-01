@@ -1,12 +1,19 @@
 .skills {
   position: relative;
   padding: 145px 0 105px;
+  overflow: hidden;
+
   background-image: url('../images/content/skills-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 
   @include desktopHd {
     padding-top: 155px;
+  }
+
+  @include desktop {
+    padding-top: 120px;
+    padding-bottom: 350px;
   }
 }
 
@@ -23,6 +30,15 @@
     width: 490px;
     height: 707px;
   }
+
+  @include desktop {
+    width: 337px;
+    height: 486px;
+    top: unset;
+    bottom: 0;
+    left: 50%;
+    transform: rotate(-90deg) translate(-25%, -50%);
+  }
 }
 
 .skills__stats {
@@ -33,23 +49,50 @@
   @include desktopHd {
     max-width: 805px;
   }
+
+  @include desktop {
+    width: 100%;
+    max-width: auto;
+    margin: 0 auto;
+
+    text-align: center;
+  }
 }
 
 .skills__title {
   @include font-set(30px, 36px, 700);
   margin-bottom: 52px;
+
+  @include desktop {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
 }
 
 .skills__text {
   max-width: 594px;
   width: 100%;
   margin-bottom: 76px;
+
+  @include desktop {
+    max-width: 452px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    font-size: 14px;
+  }
 }
 
 .skills__subtitle {
   margin-bottom: 20px;
   @include font-set(24px, 48px, 700);
   color: $main-text;
+
+  @include desktop {
+    font-size: 18px;
+  }
 }
 
 .skills__box {
@@ -61,6 +104,11 @@
   @include desktopHd {
     max-width: 693px;
   }
+
+  @include desktop {
+    margin: 0 auto;
+    margin-bottom: 35px;
+  }
 }
 
 .skills__list {
@@ -71,6 +119,11 @@
   position: relative;
   width: 165px;
   height: 165px;
+
+  @include desktop {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 .skills__progress {

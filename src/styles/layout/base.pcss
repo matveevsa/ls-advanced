@@ -35,15 +35,15 @@ body {
   @include desktopHd {
     max-width: 1080px;
   }
-}
 
+  @include desktop {
+    width: 89.5%;
+  }
 
-@include phones {
-  .container {
+  @include phones {
     width: 85%;
   }
 }
-
 
 .fullscreen-section {
   height: 100vh;
@@ -76,6 +76,10 @@ body {
 .title {
   @include font-set(36px, 48px, 700);
   color: $main-text;
+
+  @include desktop {
+    font-size: 30px;
+  }
 }
 
 .text {

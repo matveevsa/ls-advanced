@@ -6,15 +6,25 @@
   @include desktopHd {
     padding-top: 235px;
   }
+
+  @include desktop {
+    padding-top: 95px;
+  }
 }
 
 .intro__title {
-  margin-left: 21%;
-  @include flex(flex-start, flex-start, row, wrap);
+  @include flex(center, center, row, wrap);
 
   text-align: left;
   @include font-set(72px, 60px, 800);
   color: $main-text;
+
+  @include desktop {
+    flex-direction: column;
+
+    @include font-set(48px, 48px, 800);
+    text-align: center;
+  }
 }
 
 .intro__subtitle {
@@ -23,6 +33,13 @@
   text-align: right;
   @include font-set(18px, 30px, 600);
   opacity: 0.4;
+
+  @include desktop {
+    margin: 0;
+
+    text-align: center;
+    font-size: 16px;
+  }
 }
 
 .intro__scroll {
@@ -44,6 +61,10 @@
 
   @include desktopHd {
     margin-top: 220px;
+  }
+
+  @include desktop {
+    display: none;
   }
 }
 
