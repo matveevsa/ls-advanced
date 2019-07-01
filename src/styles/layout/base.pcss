@@ -31,11 +31,26 @@ body {
   max-width: 1480px;
   width: 95%;
   // width: 1490px;
+}
 
-  @include phones {
+@media screen and (max-width: 1600px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@include desktop {
+  .container {
+    max-width: 1080px;
+  }
+}
+
+@include phones {
+  .container {
     width: 85%;
   }
 }
+
 
 .fullscreen-section {
   height: 100vh;
