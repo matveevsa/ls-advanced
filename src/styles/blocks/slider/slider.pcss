@@ -2,6 +2,11 @@
   position: absolute;
   bottom: 60px;
   right: 155px;
+
+  @include desktopHd {
+    bottom: 25px;
+    right: 110px;
+  }
 }
 
 .slider__list {
@@ -11,6 +16,10 @@
   padding: 3px;
 
   overflow: hidden;
+
+  @include desktopHd {
+    width: 535px;
+  }
 }
 
 .slider__item {

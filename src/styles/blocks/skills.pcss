@@ -4,17 +4,35 @@
   background-image: url('../images/content/skills-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include desktopHd {
+    padding-top: 155px;
+  }
 }
 
 .skills__image {
   position: absolute;
   top: 14%;
   left: 0;
+  width: 682px;
+  height: 983px;
+
+  @include desktopHd {
+    top: 40%;
+    left: -7%;
+    width: 490px;
+    height: 707px;
+  }
 }
 
 .skills__stats {
   max-width: 977px;
+  width: 100%;
   margin-left: auto;
+
+  @include desktopHd {
+    max-width: 805px;
+  }
 }
 
 .skills__title {
@@ -23,7 +41,8 @@
 }
 
 .skills__text {
-  width: 63%;
+  max-width: 594px;
+  width: 100%;
   margin-bottom: 76px;
 }
 
@@ -34,9 +53,14 @@
 }
 
 .skills__box {
-  width: 91%;
-  margin-bottom: 27px;
-  padding-left: 125px;
+  max-width: 763px;
+  width: 100%;
+  margin-left: auto;
+  margin-bottom: 25px;
+
+  @include desktopHd {
+    max-width: 693px;
+  }
 }
 
 .skills__list {

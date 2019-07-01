@@ -9,10 +9,14 @@ html(lang="en")
     title Portfolio | main page
   body
     .wrapper
-      .lead-wrap
+      section.parallax
+        - var items = ['1', '2', '3', '4', '5', '5']
+          each item in items
+            .parallax__layer
+              +image(`parallax/${item}.png`, 'parallax__image')
         include components/header
         include components/intro
-        include components/hero
+      include components/hero
       main.main
         include components/skills
         include components/projects

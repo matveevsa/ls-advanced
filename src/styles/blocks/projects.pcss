@@ -2,11 +2,20 @@
   padding-top: 193px;
   padding-bottom: 200px;
   color: $text-color;
+
+  @include desktopHd {
+    padding-top: 145px;
+    padding-bottom: 140px;
+  }
 }
 
 .projects__title {
   margin-bottom: 90px;
   color: $text-color;
+
+  @include desktopHd {
+    margin-bottom: 60px;
+  }
 }
 
 .projecrs__text {
@@ -31,6 +40,12 @@
   @include font-set(400px, 48px, 800);
   color: #f0f0f0;
   z-index: -1;
+
+  @include desktopHd {
+    top: 80px;
+    right: -10px;
+    font-size: 300px;
+  }
 }
 
 .projects__school {
@@ -41,4 +56,9 @@
 .projects__image {
   width: 977px;
   height: 550px;
+
+  @include desktopHd {
+    width: 622px;
+    height: 353px;
+  }
 }

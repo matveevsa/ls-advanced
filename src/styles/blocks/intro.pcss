@@ -2,6 +2,10 @@
   padding-top: 355px;
   padding-bottom: 168px;
   text-align: center;
+
+  @include desktopHd {
+    padding-top: 235px;
+  }
 }
 
 .intro__title {
@@ -22,6 +26,8 @@
 }
 
 .intro__scroll {
+  position: relative;
+  z-index: 99;
   display: inline-block;
   margin: 0 auto;
   margin-top: 330px;
@@ -35,7 +41,11 @@
   @include font-set(18px, 30px, 600);
   color: $main-text;
   text-decoration: none;
+
+  @include desktopHd {
+    margin-top: 220px;
   }
+}
 
 .intro__scroll:hover {
   color: $secondary-color;
