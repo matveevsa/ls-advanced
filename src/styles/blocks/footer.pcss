@@ -12,6 +12,10 @@
   @include desktopHd {
     grid-template-columns: 25% 34% 41%;
   }
+
+  @include desktop {
+    grid-template-columns: 34% 66%;
+  }
 }
 
 .footer__copyright {
@@ -24,6 +28,7 @@
 
   @include desktopHd {
     grid-row: 1 / 2;
+    align-self: center;
   }
 }
 
@@ -57,6 +62,10 @@
     grid-column: 2 / 4;
     grid-row: 1 / 2;
   }
+
+  @include desktop {
+    grid-column: 2 / 3;
+  }
 }
 
 .footer__block {
@@ -65,6 +74,10 @@
 
   @include desktopHd {
     grid-column: 2 / 3;
+  }
+
+  @include desktop {
+    padding-top: 55px;
   }
 }
 
@@ -82,6 +95,12 @@
 
   @include desktopHd {
     grid-column: 3 / 4;
+  }
+
+  @include desktop {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    padding-top: 55px;
   }
 }
 
@@ -102,10 +121,6 @@
     max-width: 726px;
     width: 100%;
     color: $main-text;
-  }
-
-  .main-nav__link {
-    padding-top: 0;
   }
 }
 

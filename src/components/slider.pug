@@ -7,8 +7,8 @@ mixin slider(mod, arrNames, active)
         each item in arrNames
           if active === item
             .slider__item.slider__item--active
-              +image(`content/${item}.jpg`, 'slider__image')
+              +image(`content/${item}.jpg`, 'slider__image', 'слайд')
           else
             .slider__item
                 block item
-                +image(`content/${item}.jpg`, 'slider__image')
+                +image(`content/${item}.jpg`, 'slider__image', 'слайд')

@@ -7,6 +7,10 @@
     bottom: 25px;
     right: 110px;
   }
+
+  @include desktop {
+    right: 4.1rem;
+  }
 }
 
 .slider__list {
@@ -18,7 +22,7 @@
   overflow: hidden;
 
   @include desktopHd {
-    width: 535px;
+    width: 537px;
   }
 }
 
@@ -26,6 +30,12 @@
   flex: 1 0 auto;
   height: 100px;
   width: 177px;
+  cursor: pointer;
+}
+
+.slider__item:hover {
+  outline: 3px solid $secondary-color;
+  z-index: 1;
 }
 
 .slider__item--active {

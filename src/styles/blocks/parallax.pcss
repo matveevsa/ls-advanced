@@ -31,9 +31,15 @@
 
   &:nth-child(2) {
     .parallax__image {
-      top: 390px;
+      top: 285px;
       height: 50%;
+
+      @include desktop {
+        top: 215px;
+        height: 40%;
+      }
     }
+
   }
 
   &:nth-child(3) {
@@ -43,6 +49,10 @@
 
       @include desktopHd {
         top: 31%;
+      }
+
+      @include desktop {
+        top: 36%;
       }
     }
   }
@@ -65,11 +75,13 @@
     .parallax__image {
       top: 63%;
       z-index: 1;
-    }
 
-    @media (min-width: 1600px) {
-      .parallax__image {
+      @media (min-width: 1600px) {
         top: 50%;
+      }
+
+      @include desktop {
+        top: 70%;
       }
     }
   }

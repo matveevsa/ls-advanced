@@ -7,6 +7,11 @@
     padding-top: 145px;
     padding-bottom: 140px;
   }
+
+  @include desktop {
+    padding-top: 120px;
+    padding-bottom: 75px;
+  }
 }
 
 .projects__title {
@@ -18,18 +23,28 @@
   }
 }
 
-.projecrs__text {
+.projects__text {
   @extend .projects__title;
 }
 
 .projects__wrapper {
   @include flex(flex-start, flex-start);
+
+  @include desktop {
+    flex-direction: column;
+  }
 }
 
 .projects__slider {
   position: relative;
   max-width: 1133px;
   width: 100%;
+
+  @include desktop {
+    margin: 0 auto;
+    margin-bottom: 70px;
+    max-width: 688px;
+  }
 }
 
 .projects__slider:after {
@@ -46,11 +61,22 @@
     right: -10px;
     font-size: 300px;
   }
+
+  @include desktop {
+    right: -65px;
+  }
 }
 
 .projects__school {
   max-width: 348px;
   width: 100%;
+
+  @include desktop {
+    margin: 0 auto;
+    max-width: 452px;
+
+    text-align: center;
+  }
 }
 
 .projects__image {

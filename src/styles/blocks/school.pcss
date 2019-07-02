@@ -1,6 +1,10 @@
 .school__list {
   margin-bottom: 35px;
   @include flex(flex-start, center, row, wrap);
+
+  @include desktop {
+    justify-content: center;
+  }
 }
 
 .school__item {

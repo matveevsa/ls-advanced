@@ -63,11 +63,16 @@
   max-width: 474px;
   width: 100%;
   padding-left: 125px;
+
+  @include desktop {
+    width: 48%;
+    padding-left: 40px;
+  }
 }
 
 .review__item:before {
   position: absolute;
-  left: 20px;
+  left: 0;
   top: 0;
   content: '';
   display: block;
@@ -78,6 +83,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.05;
+
+  @include desktop {
+    width: 30px;
+    height: 26px;
+  }
 }
 
 .review__qoute {
