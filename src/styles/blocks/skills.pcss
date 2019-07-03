@@ -39,6 +39,12 @@
     left: 50%;
     transform: rotate(-90deg) translate(-25%, -50%);
   }
+
+  @include tablets {
+    width: 235px;
+    height: 338px;
+    transform: rotate(-90deg) translate(-25%, -35%);
+  }
 }
 
 .skills__stats {
@@ -51,11 +57,14 @@
   }
 
   @include desktop {
-    width: 100%;
     max-width: auto;
     margin: 0 auto;
 
     text-align: center;
+  }
+
+  @include tablets {
+    max-width: 18.6rem;
   }
 }
 
@@ -67,6 +76,13 @@
     width: 40%;
     margin: 0 auto;
     margin-bottom: 25px;
+  }
+
+  @include tablets {
+    width: 100%;
+    max-width: 18.5rem;
+
+    text-align: left;
   }
 }
 
@@ -109,6 +125,10 @@
     margin: 0 auto;
     margin-bottom: 35px;
   }
+
+  @include tablets {
+    max-width: 19rem;
+  }
 }
 
 .skills__list {
@@ -123,6 +143,11 @@
   @include desktop {
     width: 150px;
     height: 150px;
+  }
+
+  @include tablets {
+    width: 9rem;
+    height: 9rem;
   }
 }
 

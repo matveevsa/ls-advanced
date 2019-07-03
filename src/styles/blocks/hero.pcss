@@ -21,6 +21,10 @@
   @include desktop {
     padding-bottom: 75px;
   }
+
+  @include tablets {
+    padding-top: 10px;
+  }
 }
 
 .hero__wrapper {
@@ -31,11 +35,23 @@
   @include desktopHd {
     width: 100%;
   }
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .hero__head {
   width: 35%;
   @include flex(center, stretch, column);
+
+  @include tablets {
+    width: 100%;
+    max-width: 480px;
+    align-items: center;
+    margin-bottom: 50px;
+  }
 }
 
 .hero__image {
@@ -66,7 +82,13 @@
 .hero__about {
   position: relative;
   padding-left: 50px;
-  width: 61%
+  width: 61%;
+
+  @include tablets {
+    max-width: 260px;
+    width: 100%;
+    padding-left: 0;
+  }
 }
 
 .hero__name {
@@ -78,6 +100,10 @@
   margin-top: 95px;
   font-style: italic;
   font-weight: 300;
+
+  @include tablets {
+    margin-top: 50px;
+  }
 }
 
 .hero__asterisk:before {
