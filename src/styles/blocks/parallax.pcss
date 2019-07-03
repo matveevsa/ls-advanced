@@ -8,12 +8,12 @@
   }
 
   @include tablets {
-    min-height: 800px;
+    min-height: 45.5rem;
   }
 }
 
 .parallax__image {
-  position: relative;
+  position: absolute;
   width: 100%;
 }
 
@@ -72,7 +72,7 @@
       }
 
       @include tablets {
-        top: 48%;
+        top: 46%;
       }
     }
 
@@ -81,16 +81,9 @@
   &:nth-child(5),
   &:nth-child(6) {
     .parallax__image {
-      top: 63%;
+      height: 35%;
+      bottom: 0;
       z-index: 1;
-
-      @media (min-width: 1600px) {
-        top: 50%;
-      }
-
-      @include desktop {
-        top: 70%;
-      }
     }
   }
 }

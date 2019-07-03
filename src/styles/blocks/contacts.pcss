@@ -1,5 +1,9 @@
 .contacts {
   padding-bottom: 165px;
+
+  @include tablets {
+    padding-bottom: 110px;
+  }
 }
 
 .contacts__title {
@@ -14,10 +18,18 @@
 .contacts__info {
   @include flex(space-between);
   margin-bottom: 30px;
+
+  @include tablets {
+    flex-wrap: wrap;
+  }
 }
 
 .contacts__block {
   width: 47%;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .contacts__label-text {
@@ -97,6 +109,10 @@
 
   @include desktop {
     margin: 0 auto;
+  }
+
+  @include tablets {
+    padding: 16px 80px;
   }
 }
 

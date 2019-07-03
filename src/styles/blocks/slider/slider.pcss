@@ -11,6 +11,10 @@
   @include desktop {
     right: 4.1rem;
   }
+
+  @include tablets {
+    right: 0;
+  }
 }
 
 .slider__list {
@@ -23,6 +27,10 @@
 
   @include desktopHd {
     width: 537px;
+  }
+
+  @include tablets {
+    display: none;
   }
 }
 
@@ -53,6 +61,10 @@
   right: -49px;
   bottom: 3px;
   @include flex(flex-start, center, column);
+
+  @include tablets {
+    right: 0;
+  }
 }
 
 .slider__button {
@@ -92,17 +104,3 @@
 .slider__button:hover:not(:disabled) {
   background-color: $secondary-color;
 }
-
-/*
-    &--prev {
-
-      &:before {
-        transform: rotate(-135deg);
-      }
-    }
-
-    &:hover:not(:disabled) {
-      background-color: $secondary-color;
-    }
-  }
- */

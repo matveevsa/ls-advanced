@@ -61,9 +61,17 @@
   align-self: center;
   border-radius: 50%;
 
+  @include tablets {
+    margin-bottom: 18px;
+  }
 }
 
 .hero__table-data {
+
+  @include tablets {
+    max-width: 260px;
+    width: 100%;
+  }
 
   .text {
     width: 50%;
@@ -77,6 +85,10 @@
 
 .hero__text {
   margin-bottom: 15px;
+
+  @include tablets {
+    margin-bottom: 0;
+  }
 }
 
 .hero__about {
@@ -93,6 +105,10 @@
 
 .hero__name {
   margin-bottom: 25px;
+
+  @include tablets {
+    font-size: 2.1rem;
+  }
 }
 
 .hero__asterisk {

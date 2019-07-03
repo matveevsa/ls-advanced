@@ -2,6 +2,11 @@
   position: relative;
   padding-top: 145px;
   padding-bottom: 195px;
+
+  @include tablets {
+    padding-top: 95px;
+    padding-bottom: 145px;
+  }
 }
 
 .review__title {
@@ -15,6 +20,12 @@
   max-width: 130px;
   width: 100%;
   @include flex(space-between, center);
+
+  @include tablets {
+    left: 50%;
+    top: 150px;
+    transform: translateX(-50%);
+  }
 }
 
 .review__button {
@@ -55,6 +66,14 @@
 .review__list {
   max-width: 977px;
   @include flex(space-between, stretch, row, wrap);
+  overflow: hidden;
+
+  @include tablets {
+    max-width: 29rem;
+    margin: 0 auto;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
 }
 
 .review__item {
@@ -67,6 +86,12 @@
   @include desktop {
     width: 48%;
     padding-left: 40px;
+  }
+
+  @include tablets {
+    width: 100%;
+    padding-left: 0;
+    flex-shrink: 0;
   }
 }
 
