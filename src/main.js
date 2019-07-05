@@ -5,3 +5,5 @@ if (process.env.NODE_ENV === "development") {
 
 import "./scripts/skills";
 import "./scripts/popup-menu";
+import "./scripts/parallax-train";
+import "./scripts/parallax-foliage";

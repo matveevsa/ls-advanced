@@ -1,7 +1,15 @@
 mixin main-nav(mod)
   nav(class=`main-nav main-nav__${mod}`)
     ul.main-nav__list
-      -var items = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связатсья',]
+      -
+        var items = [
+          {title: 'Главная', link: '#'},
+          {title: 'Обо мне', link: '#about'},
+          {title: 'Навыки', link: '#skills'},
+          {title: 'Работы', link: '#projects'},
+          {title: 'Отзывы', link: '#review'},
+          {title: 'Связаться', link: '#contacts'},
+        ]
       each item in items
         li.main-nav__item
-          a.main-nav__link(href="#")= `${item}`
+          a.main-nav__link(href=`${item.link}`)= `${item.title}`

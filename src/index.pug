@@ -10,10 +10,18 @@ html(lang="en")
   body
     .wrapper
       section.parallax-train
-        - var items = ['1', '2', '3', '4', '5', '6']
-          each item in items
-            .parallax-train__layer
-              +image(`parallax-train/${item}.png`, 'parallax-train__image', 'поезд и горы')
+        -
+          var items = [
+            {title: '1', speed: '0.1'},
+            {title: '2', speed: '0.4'},
+            {title: '3', speed: '0.1'},
+            {title: '4', speed: '0.4'},
+            {title: '5', speed: '0'},
+            {title: '6', speed: '0'}
+          ]
+        each item in items
+          .parallax-train__layer(data-speed=`${item.speed}`)
+            +image(`parallax-train/${item.title}.png`, 'parallax-train__image', 'поезд и горы')
         include components/header
         include components/intro
         include components/popup-menu
@@ -22,10 +30,16 @@ html(lang="en")
         include components/skills
         include components/projects
         section.parallax-foliage
-          - var items = ['1', '2', '3', '4']
-            each item in items
-              .parallax-foliage__layer
-                +image(`parallax-foliage/${item}.png`, 'parallax-foliage__image', 'листья')
+          -
+            var items = [
+              {title: '1', speed: '0.1'},
+              {title: '2', speed: '0.2'},
+              {title: '3', speed: '0.3'},
+              {title: '4', speed: '0.4'}
+            ]
+          each item in items
+            .parallax-foliage__layer(data-spd=`${item.speed}`)
+              +image(`parallax-foliage/${item.title}.png`, 'parallax-foliage__image', 'листья')
           include components/review
           include components/contacts
       include components/footer

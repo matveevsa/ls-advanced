@@ -3,6 +3,8 @@
   overflow: hidden;
   min-height: 1335px;
 
+  background-color: #1b1f22;
+
   @include desktop {
     min-height: 1097px;
   }
@@ -24,6 +26,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  will-change: transform;
 
   &:nth-child(1) {
     .parallax-train__image {
@@ -62,6 +65,7 @@
   }
 
   &:nth-child(3) {
+    z-index: 1;
     .parallax-train__image {
       top: 31.5rem;
       z-index: 1;
@@ -82,6 +86,7 @@
   }
 
   &:nth-child(4) {
+    z-index: 1;
     .parallax-train__image {
       top: 56rem;
       z-index: 1;
@@ -104,6 +109,7 @@
 
   &:nth-child(5),
   &:nth-child(6) {
+    z-index: 1;
     .parallax-train__image {
       bottom: 0;
       z-index: 1;
