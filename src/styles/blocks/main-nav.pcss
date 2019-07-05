@@ -1,6 +1,5 @@
 .main-nav {
   width: 46.6%;
-  min-height: 108px;
   @include flex(space-between, center, row, wrap);
 
   @include desktopHd {
@@ -37,18 +36,9 @@
   background: $secondary-color;
 }
 
-
-.main-nav__header .toggle {
-  @include desktop {
-    display: block;
-  }
-}
-
 .main-nav__header {
   @include desktop {
-    width: 30px;
-    margin-left: 90px;
-    order: 1;
+    display: none;
   }
 }
 
@@ -80,5 +70,23 @@
 
   @include desktop {
     padding-bottom: 15px;
+  }
+}
+
+.main-nav__popup-menu {
+  max-width: 160px;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 40px;
+
+  .main-nav__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav__link {
+    padding: 0;
+
+    @include font-set(18px, 48px, 600);
   }
 }

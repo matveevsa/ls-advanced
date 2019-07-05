@@ -3,16 +3,26 @@
 
   @include tablets {
     padding-bottom: 110px;
+    max-width: 480px;
   }
 }
 
 .contacts__title {
   margin-bottom: 70px;
+
+  @include desktop {
+    text-align: center;
+  }
 }
 
 .contacts__form {
   max-width: 870px;
   width: 100%;
+
+  @include tablets {
+    max-width: 480px;
+    margin: 0 auto;
+  }
 }
 
 .contacts__info {

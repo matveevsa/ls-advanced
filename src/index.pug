@@ -9,18 +9,23 @@ html(lang="en")
     title Portfolio | main page
   body
     .wrapper
-      section.parallax
-        - var items = ['1', '2', '3', '4', '5', '5']
+      section.parallax-train
+        - var items = ['1', '2', '3', '4', '5', '6']
           each item in items
-            .parallax__layer
-              +image(`parallax/${item}.png`, 'parallax__image')
+            .parallax-train__layer
+              +image(`parallax-train/${item}.png`, 'parallax-train__image', 'поезд и горы')
         include components/header
         include components/intro
+        include components/popup-menu
       include components/hero
       main.main
         include components/skills
         include components/projects
-        .feedback-wrap
+        section.parallax-foliage
+          - var items = ['1', '2', '3', '4']
+            each item in items
+              .parallax-foliage__layer
+                +image(`parallax-foliage/${item}.png`, 'parallax-foliage__image', 'листья')
           include components/review
           include components/contacts
       include components/footer

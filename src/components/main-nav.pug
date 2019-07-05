@@ -1,6 +1,5 @@
 mixin main-nav(mod)
   nav(class=`main-nav main-nav__${mod}`)
-    include toggle
     ul.main-nav__list
       -var items = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связатсья',]
       each item in items
