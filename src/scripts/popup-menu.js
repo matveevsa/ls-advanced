@@ -10,7 +10,6 @@ toggleOpen.addEventListener('click', (e) => {
 });
 
 popupMenu.addEventListener('click', (e) => {
-  e.preventDefault();
   let target = e.target;
 
   if (target == popupMenu

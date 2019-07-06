@@ -2,9 +2,23 @@ section.projects#projects
   .container
     h2.title.projects__title Мои работы
   .projects__wrapper
-    .projects__slider
-        +image('content/1.jpg', 'projects__image', 'слайд')
-        include slider
-        +slider('projects', ['1', '2', '3', '4', '5'], '1')
-    .projects__school.school
-      include school
+    .projects-slider
+      .projects-slider__image(data-slide="2")
+        .projects-slider__image-container
+          img.projects-slider__fullimage(src=require('images/content/1.jpg') alt='слайд')
+        .projects-slider__controls
+          button.projects-slider__button.projects-slider__button--next
+          button.projects-slider__button.projects-slider__button--prev(disabled)
+        ul.projects-slider__thumbs
+          - for (var i = 1; i <= 5; i++)
+            li.projects-slider__thumb-item
+              .projects-slider__thumb
+                img.projects-slider__thumb-img(src=require(`images/content/${i}.jpg`))
+      .pojects-slider__data
+        ul.pojects-slider__tags
+          - var items = ['HTML', 'CSS', 'JavaScript']
+          each item in items
+            li.pojects-slider__tag-item #{item}
+        h2.pojects-slider__title.title Сайт школы образования
+        p.pojects-slider__text.text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+        a.pojects-slider__link Посмотреть сайт
