@@ -14,9 +14,13 @@ function moveLayersDependesOnScroll(x, y) {
   });
 }
 
-parallaxTrain.addEventListener('mousemove', (evt) => {
-  const x = evt.clientX,
-        y = evt.clientY;
-console.log(x, y);
-  moveLayersDependesOnScroll(x, y);
-})
+const windowWidth = document.body.clientWidth;
+
+if (windowWidth > 768) {
+  parallaxTrain.addEventListener('mousemove', (evt) => {
+    const x = evt.clientX,
+          y = evt.clientY;
+  console.log(x, y);
+    moveLayersDependesOnScroll(x, y);
+  });
+}

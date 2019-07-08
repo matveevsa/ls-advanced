@@ -7,4 +7,26 @@ section.skills#skills
       .skills__widget
         #skills-container
 
-include ./widgets/skills-widget.pug
+script(type='text/x-template')#skills-list
+ .skills__wrapper
+    .skills__box(v-for="skill in skills")
+      row(
+        :skill="skill"
+        )
+
+script(type='text/x-template')#skills-row
+  .skills__row
+    h3.skills__subtitle {{skill.skillsGroup}}
+    ul.skills__list
+      li.skills__item(v-for="(skillPercent, skillName) in skill.skills")
+        skill(
+          :skillName="skillName"
+          :skillPercent="skillPercent"
+        )
+
+script(type='text/x-template')#skill
+  .skills__skill
+    svg.skills__progress(viewBox="0 0 100 100" preserveAspectRatio="none")
+      circle.skills__circle(cx='50' cy='50' r='40')
+      circle.skills__circle.skills__circle-dash(ref="circle" cx='50' cy='50' r='40')
+    .skills__name.text {{skillName}}

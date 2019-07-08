@@ -66,15 +66,15 @@
 
 .review__list {
   max-width: 977px;
-  @include flex(space-between, stretch, row, wrap);
-  overflow: hidden;
+  /* @include flex(space-between, stretch, row, wrap); */
+  /* overflow: hidden;
 
   @include tablets {
     max-width: 29rem;
     margin: 0 auto;
     width: 100%;
     flex-wrap: nowrap;
-  }
+  } */
 }
 
 .review__item {
@@ -91,7 +91,8 @@
 
   @include tablets {
     width: 100%;
-    padding-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
     flex-shrink: 0;
   }
 }

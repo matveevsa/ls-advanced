@@ -13,8 +13,12 @@ function moveLayersDependesOnScroll(wScroll) {
   })
 }
 
-window.addEventListener('scroll', (evt) => {
-  const wScroll = window.pageYOffset;
+const windowWidth = document.body.clientWidth;
 
-  moveLayersDependesOnScroll(wScroll);
-})
+if (windowWidth > 768) {
+  window.addEventListener('scroll', (evt) => {
+    const wScroll = window.pageYOffset;
+
+    moveLayersDependesOnScroll(wScroll);
+  });
+}
