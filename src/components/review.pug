@@ -6,8 +6,8 @@ section.review.container#review
 script(type="text/x-template")#review__slider
   .review__wrap
     .review__controls
-      button.review__button.review__button-prev(@click="slide('prev')")
-      button.review__button.review__button-next(@click="slide('next')")
+      button.review__button.review__button-prev(@click="slide('prev')", :disabled="isDisabledPrev")
+      button.review__button.review__button-next(@click="slide('next')", :disabled="isDisabledNext")
 
     .review__list
       flickity(ref="flickity", :options="flickityOptions")

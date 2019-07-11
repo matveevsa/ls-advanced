@@ -16,7 +16,10 @@ new Vue({
         freeScroll: false,
         groupCells: true,
         wrapAround: false
-      }
+      },
+      clickBtnCount: 1,
+      isDisabledPrev: true,
+      isDisabledNext: false
     }
   },
   methods: {
@@ -33,9 +36,19 @@ new Vue({
       switch(direction) {
         case 'next':
           this.$refs.flickity.next();
-          break;
+          this.clickBtnCount++;
+          if (this.clickBtnCount >= this.reviews.length / 2) {
+            this.isDisabledNext = true;
+          }
+          this.isDisabledPrev = false;
+          break
         case 'prev':
           this.$refs.flickity.previous();
+          this.clickBtnCount--;
+          if (this.clickBtnCount <= 1) {
+            this.isDisabledPrev = true;
+          }
+          this.isDisabledNext = false;
           break;
       }
     }

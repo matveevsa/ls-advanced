@@ -53,13 +53,22 @@
   transform: rotate(45deg) translate(-50%);
 }
 
+.review__button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.review__button:disabled:before {
+  opacity: 0.3;
+}
+
 .review__button-prev:before {
   border: 2px solid #fff;
   border-right: transparent;
   border-top: transparent;
 }
 
-.review__button:hover,
+.review__button:hover:not(:disabled),
 .review__button:hover:before {
   border-color: $secondary-color;
 }
@@ -72,6 +81,7 @@
   @include flex(space-between, flex-start, column);
   position: relative;
   max-width: 474px;
+  min-height: 14rem;
   width: 100%;
   padding-left: 125px;
 
