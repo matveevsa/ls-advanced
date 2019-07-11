@@ -9,14 +9,37 @@ html(lang="en")
     title Portfolio | main page
   body
     .wrapper
-      .lead-wrap
+      section.parallax-train
+        -
+          var items = [
+            {title: '1', speed: '0.1'},
+            {title: '2', speed: '0.28'},
+            {title: '3', speed: '0.1'},
+            {title: '4', speed: '0.4'},
+            {title: '5', speed: '0'},
+            {title: '6', speed: '0'}
+          ]
+        each item in items
+          .parallax-train__layer(data-speed=`${item.speed}`)
+            +image(`parallax-train/${item.title}.png`, 'parallax-train__image', 'поезд и горы')
         include components/header
         include components/intro
-        include components/hero
+        include components/popup-menu
+      include components/hero
       main.main
         include components/skills
         include components/projects
-        .feedback-wrap
+        section.parallax-foliage
+          -
+            var items = [
+              {title: '1', speed: '0.1'},
+              {title: '2', speed: '0.2'},
+              {title: '3', speed: '0.3'},
+              {title: '4', speed: '0.4'}
+            ]
+          each item in items
+            .parallax-foliage__layer(data-spd=`${item.speed}`)
+              +image(`parallax-foliage/${item.title}.png`, 'parallax-foliage__image', 'листья')
           include components/review
           include components/contacts
       include components/footer

@@ -1,5 +1,6 @@
 .socials {
-  width: 11%;
+  max-width: 164px;
+  width: 100%;
 }
 
 .socials__list {
@@ -16,4 +17,21 @@
 .socials__link:hover .socials__image {
   opacity: 1;
   fill: $secondary-color;
+}
+
+.socials__header {
+  @include desktop {
+    margin-left: auto;
+  }
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.socials__popup-menu {
+  .socials__image {
+    fill: $text-color;
+    opacity: 1;
+  }
 }

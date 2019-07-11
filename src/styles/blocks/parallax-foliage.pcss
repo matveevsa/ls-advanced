@@ -1,0 +1,69 @@
+.parallax-foliage {
+  position: relative;
+
+  background-image: url('../images/content/feedback-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.parallax-foliage__image {
+  position: absolute;
+}
+
+.parallax-foliage__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  @include tablets {
+    display: none;
+  }
+
+  &:nth-child(1) {
+    .parallax-foliage__image{
+      top: 70%;
+      right: 10%;
+    }
+  }
+
+  &:nth-child(2) {
+    .parallax-foliage__image{
+      top: 50%;
+      right: 12%;
+
+      @include desktop {
+        right: 0;
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    .parallax-foliage__image{
+      top: 35%;
+      right: 25%;
+
+    @include desktop {
+      top: 30%;
+      right: 100px;
+      }
+    }
+  }
+
+  &:nth-child(4) {
+    .parallax-foliage__image{
+      top: -12%;
+      right: -15%;
+
+      @include desktopHd {
+        right: -25%;
+      }
+
+      @include desktop {
+        right: -430px;
+      }
+    }
+  }
+}

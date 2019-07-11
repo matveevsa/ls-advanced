@@ -1,42 +1,134 @@
 .skills {
   position: relative;
   padding: 145px 0 105px;
+
   background-image: url('../images/content/skills-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include desktopHd {
+    padding-top: 155px;
+  }
+
+  @include desktop {
+    padding-top: 120px;
+    padding-bottom: 295px;
+    overflow: hidden;
+  }
 }
 
 .skills__image {
   position: absolute;
   top: 14%;
   left: 0;
+  width: 682px;
+  height: 983px;
+
+  @include desktopHd {
+    top: 40%;
+    left: -7%;
+    width: 490px;
+    height: 707px;
+  }
+
+  @include desktop {
+    width: 337px;
+    height: 486px;
+    top: unset;
+    bottom: 0;
+    left: 50%;
+    transform: rotate(-90deg) translate(-25%, -50%);
+  }
+
+  @include tablets {
+    width: 235px;
+    height: 338px;
+    transform: rotate(-90deg) translate(-25%, -35%);
+  }
 }
 
 .skills__stats {
   max-width: 977px;
+  width: 100%;
   margin-left: auto;
+
+  @include desktopHd {
+    max-width: 805px;
+  }
+
+  @include desktop {
+    max-width: auto;
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  @include tablets {
+    max-width: 18.6rem;
+  }
 }
 
 .skills__title {
   @include font-set(30px, 36px, 700);
   margin-bottom: 52px;
+
+  @include desktop {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+
+  @include tablets {
+    width: 100%;
+    max-width: 18.5rem;
+
+    text-align: left;
+  }
 }
 
 .skills__text {
-  width: 63%;
+  max-width: 594px;
+  width: 100%;
   margin-bottom: 76px;
+
+  @include desktop {
+    max-width: 452px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    font-size: 14px;
+  }
 }
 
 .skills__subtitle {
   margin-bottom: 20px;
   @include font-set(24px, 48px, 700);
   color: $main-text;
+
+  @include desktop {
+    font-size: 18px;
+  }
 }
 
 .skills__box {
-  width: 91%;
-  margin-bottom: 27px;
-  padding-left: 125px;
+  max-width: 763px;
+  width: 100%;
+  margin-left: auto;
+  margin-bottom: 25px;
+
+  @include desktopHd {
+    max-width: 693px;
+  }
+
+  @include desktop {
+    margin: 0 auto;
+    margin-bottom: 35px;
+  }
+
+  @include tablets {
+    max-width: 19rem;
+  }
 }
 
 .skills__list {
@@ -47,6 +139,16 @@
   position: relative;
   width: 165px;
   height: 165px;
+
+  @include desktop {
+    width: 150px;
+    height: 150px;
+  }
+
+  @include tablets {
+    width: 9rem;
+    height: 9rem;
+  }
 }
 
 .skills__progress {
@@ -63,9 +165,9 @@
 
 .skills__circle-dash {
   stroke: $secondary-color;
-  stroke-width: 5;
+  stroke-width: 7;
   stroke-dasharray: 251;
-  stroke-dashoffset: 186;
+  stroke-dashoffset: 100;
   opacity: 1;
 }
 
@@ -76,4 +178,5 @@
   transform: translate(-50%, -50%);
 
   text-align: center;
+  text-transform: ;
 }

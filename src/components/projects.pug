@@ -1,10 +1,60 @@
-section.projects
+section.projects#projects
   .container
     h2.title.projects__title Мои работы
-    .projects__wrapper
-      .projects__slider
-          +image('content/1.jpg', 'projects__image')
-          include slider
-          +slider('projects', ['1', '2', '3', '4', '5'], '1')
-      .projects__school.school
-        include school
+  .projects__wrapper
+    #slider-component
+
+script(text/x-template)#slider-container
+  .projects-slider
+    display(
+      :projects="projects"
+      :currentSlide="currentSlide"
+      :isDisabledNext="isDisabledNext"
+      :isDisabledPrev="isDisabledPrev"
+      @slide="handleSlide"
+    )
+    info(
+      :currentSlide = "currentSlide"
+    )
+
+script(text/x-template)#slider-display
+  .projects-slider__image(data-slide="1")
+    .projects-slider__image-container
+      img.projects-slider__fullimage(:src="currentSlide.photo" alt="слайд")
+    buttons(
+      @slide="direction => $emit('slide', direction)"
+      :isDisabledNext="isDisabledNext"
+      :isDisabledPrev="isDisabledPrev"
+    )
+    thumbs(
+      :projects="projects"
+      :currentSlide="currentSlide"
+    )
+
+script(text/x-template)#slider-thumbs
+  ul.projects-slider__thumbs
+    li.projects-slider__thumb-item(v-for="item in projects")
+      .projects-slider__thumb(:class="{'projects-slider__thumb--active': item.id === currentSlide.id}")
+        img.projects-slider__thumb-img(:src="item.photo" alt="превью")
+
+script(text/x-template)#slider-buttons
+  .projects-slider__controls
+    button.projects-slider__button.projects-slider__button--next(
+      @click="$emit('slide', 'next')"
+      :disabled='isDisabledNext')
+    button.projects-slider__button.projects-slider__button--prev(
+      @click="$emit('slide', 'prev')"
+      :disabled='isDisabledPrev')
+
+script(text/x-template)#slider-info
+  .pojects-slider__data
+    tags
+    h2.pojects-slider__title.title {{currentSlide.title}}
+    p.pojects-slider__text.text {{currentSlide.descr}}
+    a.pojects-slider__link(:href="currentSlide.link" target="_blank") Посмотреть сайт
+
+script(text/x-template)#slider-tags
+  ul.pojects-slider__tags
+    - var items = ['HTML', 'CSS', 'JavaScript']
+    each item in items
+      li.pojects-slider__tag-item #{item}

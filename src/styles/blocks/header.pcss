@@ -1,6 +1,17 @@
 .header {
+  position: relative;
+  z-index: 99;
+  min-height: 108px;
   padding-top: 22px;
   @include flex(space-between, center, row, wrap);
 
   color: $main-text;
+
+  @include desktop {
+    justify-content: flex-start;
+  }
+
+  @include tablets {
+    justify-content: space-between;
+  }
 }

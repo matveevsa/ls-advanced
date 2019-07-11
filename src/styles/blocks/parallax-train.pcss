@@ -1,0 +1,118 @@
+.parallax-train {
+  position: relative;
+  overflow: hidden;
+  min-height: 1335px;
+
+  background-color: #1b1f22;
+
+  @include desktop {
+    min-height: 1097px;
+  }
+
+  @include tablets {
+    min-height: 45.5rem;
+  }
+}
+
+.parallax-train__image {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+}
+
+.parallax-train__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+
+  &:nth-child(1) {
+    .parallax-train__image {
+      top: 0;
+      left: 0;
+
+      @include desktopHd {
+        height: 37%;
+      }
+
+      @include tablets {
+        height: 45%;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    .parallax-train__image {
+      top: 22.8rem;
+
+      @include desktopHd {
+        top: 305px;
+        height: 40%;
+      }
+
+      @include desktop {
+        top: 225px;
+        height: 38%;
+      }
+
+      @include tablets {
+        top: 11rem;
+      }
+    }
+
+  }
+
+  &:nth-child(3) {
+    z-index: 1;
+    .parallax-train__image {
+      top: 31.5rem;
+      z-index: 1;
+
+      @include desktopHd {
+        top: 405px;
+      }
+
+      @include desktop {
+        top: 340px;
+        height: 38%;
+      }
+
+      @include tablets {
+        top: 13rem;
+      }
+    }
+  }
+
+  &:nth-child(4) {
+    z-index: 1;
+    .parallax-train__image {
+      top: 56rem;
+      z-index: 1;
+
+      @include desktopHd {
+        top: 700px;
+      }
+
+      @include desktop {
+        top: 615px;
+        height: 50%;
+      }
+
+      @include tablets {
+        top: 25rem;
+      }
+    }
+
+  }
+
+  &:nth-child(5),
+  &:nth-child(6) {
+    z-index: 1;
+    .parallax-train__image {
+      bottom: 0;
+      z-index: 1;
+    }
+  }
+}

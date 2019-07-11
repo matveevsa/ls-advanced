@@ -2,6 +2,12 @@
   position: relative;
   padding-top: 145px;
   padding-bottom: 195px;
+
+  @include tablets {
+    padding-top: 95px;
+    padding-bottom: 145px;
+    max-width: 480px;
+  }
 }
 
 .review__title {
@@ -15,6 +21,12 @@
   max-width: 130px;
   width: 100%;
   @include flex(space-between, center);
+
+  @include tablets {
+    left: 50%;
+    top: 150px;
+    transform: translateX(-50%);
+  }
 }
 
 .review__button {
@@ -41,6 +53,15 @@
   transform: rotate(45deg) translate(-50%);
 }
 
+.review__button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.review__button:disabled:before {
+  opacity: 0.3;
+}
+
 .review__button-prev:before {
   border: 2px solid #fff;
   border-right: transparent;
@@ -54,20 +75,32 @@
 
 .review__list {
   max-width: 977px;
-  @include flex(space-between, stretch, row, wrap);
 }
 
 .review__item {
   @include flex(space-between, flex-start, column);
   position: relative;
   max-width: 474px;
+  min-height: 14rem;
   width: 100%;
   padding-left: 125px;
+
+  @include desktop {
+    width: 48%;
+    padding-left: 40px;
+  }
+
+  @include tablets {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-shrink: 0;
+  }
 }
 
 .review__item:before {
   position: absolute;
-  left: 20px;
+  left: 0;
   top: 0;
   content: '';
   display: block;
@@ -78,6 +111,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.05;
+
+  @include desktop {
+    width: 30px;
+    height: 26px;
+  }
 }
 
 .review__qoute {

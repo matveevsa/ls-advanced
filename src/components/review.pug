@@ -1,20 +1,20 @@
-section.review.container
+section.review.container#review
   h2.title.review__title Что обо мне говорят
-  .review__controls
-    button.review__button.review__button-prev
-    button.review__button.review__button-next
-  ul.review__list
-    li.review__item
-      blockquote.review__qoute.text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-      .review__author
-        +image('content/ava1.jpg', 'review__image')
-        .review__info
-          .review__name Ковальчку Дмитрий
-          .text.review__status.text Основатель Loftschool
-    li.review__item
-      blockquote.review__qoute.text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
-      .review__author
-        +image('content/ava2.jpg', 'review__image')
-        .review__info
-          .review__name Владимир Сабанцев
-          .text.review__status Преподаватель
+  #review__slider-wrapper
+    review__slider
+
+script(type="text/x-template")#review__slider
+  .review__wrap
+    .review__controls
+      button.review__button.review__button-prev(@click="slide('prev')")
+      button.review__button.review__button-next(@click="slide('next')")
+
+    .review__list
+      flickity(ref="flickity", :options="flickityOptions")
+        .review__item(v-for="item in reviews")
+          blockquote.review__qoute.text {{item.review}}
+          .review__author
+            img.review__image(:src="item.photo", alt="фото автора")
+            .review__info
+              .review__name {{item.author}}
+              .text.review__status.text {{item.status}}

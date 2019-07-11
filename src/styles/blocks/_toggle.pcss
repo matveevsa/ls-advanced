@@ -1,0 +1,22 @@
+.toggle {
+  display: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  font-size: 35px;
+  line-height: 0;
+  color: #fff;
+
+  @include desktop {
+    display: block;
+    margin-left: 95px;
+  }
+
+  &:hover {
+    color: $secondary-color;
+  }
+}

@@ -1,9 +1,9 @@
-section.hero
+section.hero#about
   h2.sr-only Немного обо мне
   .container
     .hero__wrapper
       .hero__head
-        +image('content/user.jpg', 'hero__image')
+        +image('content/user.jpg', 'hero__image', 'фото автора')
         table.hero__table-data
           - var data = [['Проживаю:', 'Сыктывкар'], ['Возраст:', '31 год'], ['Родился:', '2 августа 1987']]
           each row in data

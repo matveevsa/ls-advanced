@@ -1,23 +1,45 @@
 .contacts {
   padding-bottom: 165px;
+
+  @include tablets {
+    padding-bottom: 110px;
+    max-width: 480px;
+  }
 }
 
 .contacts__title {
   margin-bottom: 70px;
+
+  @include desktop {
+    text-align: center;
+  }
 }
 
 .contacts__form {
   max-width: 870px;
   width: 100%;
+
+  @include tablets {
+    max-width: 480px;
+    margin: 0 auto;
+  }
 }
 
 .contacts__info {
   @include flex(space-between);
   margin-bottom: 30px;
+
+  @include tablets {
+    flex-wrap: wrap;
+  }
 }
 
 .contacts__block {
   width: 47%;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .contacts__label-text {
@@ -87,12 +109,21 @@
 }
 
 .contacts__button {
+  display: block;
   border: 0;
   background-image: linear-gradient(90deg, #ec7e00, #f29400);
   text-transform: uppercase;
   @include font-set(18px, 48px, 700);
   color: $main-text;
   padding: 16px 119px;
+
+  @include desktop {
+    margin: 0 auto;
+  }
+
+  @include tablets {
+    padding: 16px 80px;
+  }
 }
 
 .contacts__button:hover {

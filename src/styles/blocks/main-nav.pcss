@@ -1,14 +1,20 @@
 .main-nav {
   width: 46.6%;
+  @include flex(space-between, center, row, wrap);
+
+  @include desktopHd {
+    width: 65%;
+  }
 }
 
 .main-nav__list {
   @include flex(space-between, center, row, wrap);
+  width: 100%;
 }
 
 .main-nav__link {
   position: relative;
-  display: block;
+  display: inline-block;
   padding: 39px 0;
 
   @include font-set(16px, 30px, 400);
@@ -28,4 +34,59 @@
   right: 0;
   height: 3px;
   background: $secondary-color;
+}
+
+.main-nav__header {
+  @include desktop {
+    display: none;
+  }
+}
+
+.main-nav__header .main-nav__list {
+  @include desktop {
+    display: none;
+  }
+}
+
+.main-nav__footer {
+  min-height: auto;
+}
+
+.main-nav__footer .main-nav__list {
+  @include desktop {
+    justify-content: flex-start;
+  }
+}
+
+.main-nav__footer .main-nav__item {
+  @include desktop {
+    max-width: 8.6rem;
+    width: 100%;
+  }
+}
+
+.main-nav__footer .main-nav__link {
+  padding-top: 0;
+
+  @include desktop {
+    padding-bottom: 15px;
+  }
+}
+
+.main-nav__popup-menu {
+  max-width: 160px;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 40px;
+
+  .main-nav__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav__link {
+    padding: 0;
+
+    @include font-set(18px, 48px, 600);
+  }
 }

@@ -2,26 +2,55 @@
   padding-top: 355px;
   padding-bottom: 168px;
   text-align: center;
+
+  @include desktopHd {
+    padding-top: 235px;
+  }
+
+  @include desktop {
+    padding-top: 120px;
+  }
+
+  @include tablets {
+    z-index: 99;
+  }
 }
 
 .intro__title {
-  margin-left: 21%;
-  @include flex(flex-start, flex-start, row, wrap);
+  @include flex(center, center, row, wrap);
 
   text-align: left;
   @include font-set(72px, 60px, 800);
   color: $main-text;
+
+  @include desktop {
+    flex-direction: column;
+
+    @include font-set(48px, 48px, 800);
+    text-align: center;
+  }
 }
 
 .intro__subtitle {
   margin-right: 50px;
+  position: relative;
+  z-index: 1;
 
   text-align: right;
   @include font-set(18px, 30px, 600);
   opacity: 0.4;
+
+  @include desktop {
+    margin: 0;
+
+    text-align: center;
+    font-size: 16px;
+  }
 }
 
 .intro__scroll {
+  position: relative;
+  z-index: 99;
   display: inline-block;
   margin: 0 auto;
   margin-top: 330px;
@@ -35,7 +64,15 @@
   @include font-set(18px, 30px, 600);
   color: $main-text;
   text-decoration: none;
+
+  @include desktopHd {
+    margin-top: 220px;
   }
+
+  @include desktop {
+    display: none;
+  }
+}
 
 .intro__scroll:hover {
   color: $secondary-color;
