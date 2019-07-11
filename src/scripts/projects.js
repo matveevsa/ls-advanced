@@ -62,11 +62,6 @@ new Vue({
       isDisabledPrev: true
     }
   },
-  computed: {
-    currentSlide() {
-      return this.projects[this.currentIndex];
-    }
-  },
   watch: {
     currentIndex(value) {
       console.log(value)

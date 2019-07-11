@@ -20,7 +20,6 @@ if (windowWidth > 768) {
   parallaxTrain.addEventListener('mousemove', (evt) => {
     const x = evt.clientX,
           y = evt.clientY;
-  console.log(x, y);
     moveLayersDependesOnScroll(x, y);
   });
 }
